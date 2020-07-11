@@ -7,8 +7,6 @@ public class PadTracker : MonoBehaviour
 {
     public List<Transform> activePads = new List<Transform>();
 
-    public TextMeshProUGUI text;
-
     void Start()
     {
         GameObject[] pads = GameObject.FindGameObjectsWithTag("Pad");
@@ -16,12 +14,12 @@ public class PadTracker : MonoBehaviour
         {
             activePads.Add(item.transform);
         }
-
-        text.text = "number of pads at start = " + activePads.Count;
     }
 
     public void AddPad(Transform newPad)
     {
+        Debug.Log("new pad tracked");
+
         if (newPad.tag == "Pad")
             activePads.Add(newPad);
     }
@@ -39,7 +37,5 @@ public class PadTracker : MonoBehaviour
             activePads.Remove(activePads[i]);
             Destroy(pad.gameObject);
         }
-
-        text.text = "number of pads after remove all = " + activePads.Count;
     }
 }

@@ -104,7 +104,7 @@ public class HandPresence : MonoBehaviour
         }
     }
 
-    private void CheckPrimaryButtonABPressed()
+    private void CheckPrimaryButtonAXPressed()
     {
         if(targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonPressed))
         {
@@ -114,7 +114,7 @@ public class HandPresence : MonoBehaviour
 
     }
 
-    private void CheckSecondaryButtonXYPressed()
+    private void CheckSecondaryButtonBYPressed()
     {
         if (targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButtonPressed))
         {
@@ -143,8 +143,8 @@ public class HandPresence : MonoBehaviour
         else
         {
             UpdateHandAnimation();
-            CheckPrimaryButtonABPressed();
-            CheckSecondaryButtonXYPressed();
+            CheckPrimaryButtonAXPressed();
+            CheckSecondaryButtonBYPressed();
         }
 
         

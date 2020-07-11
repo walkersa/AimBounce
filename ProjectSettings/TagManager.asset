@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pad
+  - Tool
+  - Shield
+  - Bullet
+  - Ball
+  - Loop
   layers:
   - Default
   - TransparentFX
