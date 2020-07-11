@@ -106,7 +106,7 @@ MonoBehaviour:
   m_OnSelectEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4699964690104295893}
+      - m_Target: {fileID: 931110706685341408}
         m_MethodName: ParentTransform
         m_Mode: 1
         m_Arguments:
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnSelectExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4699964690104295893}
+      - m_Target: {fileID: 931110706685341408}
         m_MethodName: UnparentTransform
         m_Mode: 1
         m_Arguments:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 0.25
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &4699964690104295893
+--- !u!114 &931110706685341408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,24 +185,6 @@ MonoBehaviour:
   padObjects:
   - {fileID: 1577326605376154992}
   - {fileID: 6550721812347602501}
---- !u!114 &8764393243556599755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3406148827901524430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26514bbe349d49a47b8b8c0d7b217489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attachPoints:
-  - {fileID: 6657726910882197733}
-  - {fileID: 7836405826853402744}
-  - {fileID: 3416482352220160820}
-  - {fileID: 1547491449674291774}
-  grabInteractable: {fileID: 417561460}
 --- !u!1 &4165754918387615660
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +402,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnSelectEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4699964690104295893}
+      objectReference: {fileID: 0}
     - target: {fileID: 2192554330823552584, guid: 274eaa8038a00ff4b9e46cd6773104b7,
         type: 3}
       propertyPath: m_OnSelectEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -445,7 +427,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnSelectExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4699964690104295893}
+      objectReference: {fileID: 0}
     - target: {fileID: 2192554330823552584, guid: 274eaa8038a00ff4b9e46cd6773104b7,
         type: 3}
       propertyPath: m_OnSelectExit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -558,12 +540,6 @@ GameObject:
 --- !u!4 &1809967212509268957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6563768044473206094, guid: 274eaa8038a00ff4b9e46cd6773104b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 4758470638238879379}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6657726910882197733 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2192554332256992886, guid: 274eaa8038a00ff4b9e46cd6773104b7,
     type: 3}
   m_PrefabInstance: {fileID: 4758470638238879379}
   m_PrefabAsset: {fileID: 0}

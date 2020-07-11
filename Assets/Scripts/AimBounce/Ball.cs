@@ -19,4 +19,11 @@ public class Ball : MonoBehaviour
     {
         rb.AddForceAtPosition(transform.forward * velocity, transform.position, ForceMode.Impulse);
     }
+
+    public void BoostBall(float boostVel)
+    {
+        Debug.Log("boost ball velocity");
+        rb.velocity *= boostVel;
+    }
+
 }
