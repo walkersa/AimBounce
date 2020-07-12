@@ -968,6 +968,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2001978038}
+        m_MethodName: ToolUsed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &265481494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,6 +1004,17 @@ MonoBehaviour:
       - m_Target: {fileID: 2001978034}
         m_MethodName: AddLoop
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2001978038}
+        m_MethodName: ToolUsed
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5137,6 +5159,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 791956558}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &817978509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 754358816409479595, guid: 9b5a0408c87c0534182c209cc1d500d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 754358816336155017}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843923440
 GameObject:
   m_ObjectHideFlags: 0
@@ -22313,6 +22347,7 @@ GameObject:
   - component: {fileID: 2001978035}
   - component: {fileID: 2001978034}
   - component: {fileID: 2001978033}
+  - component: {fileID: 2001978038}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -22384,7 +22419,7 @@ MonoBehaviour:
   OnNewLevel:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 265481494}
+      - m_Target: {fileID: 265481493}
         m_MethodName: UpdateLevelTools
         m_Mode: 0
         m_Arguments:
@@ -22395,12 +22430,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 265481493}
-        m_MethodName: UpdateLevelTools
-        m_Mode: 0
+      - m_Target: {fileID: 2001978038}
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -22426,6 +22461,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2001978038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001978032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18b58646c6b264e9f046b76c4c443c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointMultiplier: 100
+  scoreText: {fileID: 817978509}
 --- !u!1001 &2062697132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22864,7 +22913,7 @@ PrefabInstance:
     - target: {fileID: 754358816677323276, guid: 9b5a0408c87c0534182c209cc1d500d9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b5a0408c87c0534182c209cc1d500d9, type: 3}
