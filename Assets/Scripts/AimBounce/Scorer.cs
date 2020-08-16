@@ -6,7 +6,11 @@ using TMPro;
 
 public class Scorer : MonoBehaviour
 {
+    [Tooltip("For each tool used, one point is subtracted. This boosts the score back up so the point algo has numbers to work with (otherwise we get into the 0.003 range")]
     public int pointMultiplier;
+
+    [Tooltip("In seconds, what increment of time is used to divide total level time by")]
+    public int timeIncrement = 30;
 
     public TextMeshProUGUI scoreText;
 
@@ -65,7 +69,7 @@ public class Scorer : MonoBehaviour
     private void CalculateScore()
     {
         Debug.Log("time to complete level = " + levelTimer);
-        score = ((pointMultiplier * toolsUsed) / (levelTimer / 30f));
+        score = ((pointMultiplier * toolsUsed) / (levelTimer / timeIncrement));
         string displayScore = String.Format("{0:0}", score);
         scoreText.text = displayScore;
         Debug.Log($"Score for level = {displayScore}");

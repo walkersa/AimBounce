@@ -50,7 +50,10 @@ public class BallSpawner : ToolSpawner
         {
             Debug.Log("ball spawned");
             tool = Instantiate(toolPrefab) as GameObject;
+            Ball ball = tool.GetComponent<Ball>();
             tool.transform.position = transform.position;
+            Vector3 shootDir = transform.forward;
+            ball.MoveBall(shootDir);
             timer = 5f;
             ballActive = true;
             

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e6fd1d0bc8ff94e8f8cdc761d83ebe, type: 3}
   m_Name: Level 1 Tools Budget
   m_EditorClassIdentifier: 
-  padBudget: 1
+  padBudget: 3
   padPrefab: {fileID: 4165754918387615660, guid: 0b18fd184a7fb254e9714f10d94492bc,
     type: 3}
-  loopBudget: 0
+  loopBudget: 1
   loopPrefab: {fileID: 4675609357302878257, guid: 0458d15bd7e6bd946b804e779cd5835c,
     type: 3}
   miscToolBudget: 0

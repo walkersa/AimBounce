@@ -11,6 +11,12 @@ public class LevelManager : MonoBehaviour
 {
     public List<LevelTools> levelTools = new List<LevelTools>();
 
+    public List<LevelSetup> levelSetups = new List<LevelSetup>();
+
+    public Transform rig;
+    public Transform turret;
+    public Transform target;
+
     private LoopTracker loopTracker;
     private PadTracker padTracker;
     private TargetPositions targetPositions;
@@ -26,6 +32,15 @@ public class LevelManager : MonoBehaviour
         StartFirstLevel();
     }
 
+    //used for in editor testing only. Can be removed for headset version
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            StartNewLevel();
+        }
+    }
+
     private void FindRelevantComponents()
     {
         loopTracker = GetComponent<LoopTracker>();
@@ -37,6 +52,7 @@ public class LevelManager : MonoBehaviour
     private void StartFirstLevel()
     {
         levelTools[currentLevelIndex].Init();
+        levelSetups[currentLevelIndex].Init();
         scorer.BeginLevel(levelTools[currentLevelIndex]);
         OnNewLevel.Invoke(levelTools[currentLevelIndex]);
     }
@@ -45,9 +61,7 @@ public class LevelManager : MonoBehaviour
     {
         WrapUpPreviousLevel();
         currentLevelIndex++;
-        levelTools[currentLevelIndex].Init();
-        scorer.BeginLevel(levelTools[currentLevelIndex]);
-        OnNewLevel.Invoke(levelTools[currentLevelIndex]);
+        SpinUpNewLevel();
         Debug.Log("new level initialized");
     }
 
@@ -57,5 +71,16 @@ public class LevelManager : MonoBehaviour
         loopTracker.RemoveAllLoops();
         padTracker.RemoveAllPads();
         targetPositions.MoveTarget();
+    }
+
+    private void SpinUpNewLevel()
+    {
+        levelSetups[currentLevelIndex].Init();
+        levelSetups[currentLevelIndex].Setup(rig, turret, target);
+
+        levelTools[currentLevelIndex].Init();
+
+        scorer.BeginLevel(levelTools[currentLevelIndex]);
+        OnNewLevel.Invoke(levelTools[currentLevelIndex]);
     }
 }

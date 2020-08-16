@@ -12,12 +12,11 @@ public class Ball : MonoBehaviour
     void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
-        MoveBall();
     }
 
-    private void MoveBall()
+    public void MoveBall(Vector3 shootDirection)
     {
-        rb.AddForceAtPosition(transform.forward * velocity, transform.position, ForceMode.Impulse);
+        rb.AddForceAtPosition(shootDirection * velocity, transform.position, ForceMode.Impulse);
     }
 
     public void BoostBall(float boostVel)
